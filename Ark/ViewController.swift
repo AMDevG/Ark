@@ -21,6 +21,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var numPeopleField: UITextField!
     
     @IBAction func sendSavedButtonPress(_ sender: AnyObject) {
+    
+        self.mapView.removeAnnotations(self.mapView.annotations)
         var random_int = arc4random_uniform(UInt32(Int(victim_array.count - 1))) + 1;
         var selectedVictim = victim_array[Int(random_int)]
         
@@ -36,6 +38,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         createVictimObjects()
+        
+        let span = MKCoordinateSpanMake(0.08, 0.08)
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude:29.750733, longitude:-95.365633), span: span)
+        
+        mapView.setRegion(region, animated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -57,17 +64,57 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let readableJSON = try! JSONSerialization.jsonObject(with: jsonData! as Data, options: []) as![String:AnyObject]
         let JSONobject = JSON(readableJSON)
         
+        var evacLatStr = String(describing: JSONobject["lat"])
+        var evacLngStr = String(describing: JSONobject["lng"])
+        
+        var evacLat = Float(evacLatStr)
+        var evacLng = Float(evacLngStr)
+        
         var textID = String(describing: JSONobject["evacID"])
         var textDistance = String(describing: JSONobject["distance"])
         
         var intDistance = Double(textDistance)
-        var rescueTimeAdj = 1.5
+        var rescueTimeAdj = 2.2
         var rescueTime = intDistance! * rescueTimeAdj
         var textRescueTime = String(describing: rescueTime)
         var textToDisplay = "A civilian rescuer is coming to rescue you, \(enteredName!)! \n  \n Rescuer is on the way: \n \n Distance: \(textDistance) miles \n \n Time to Rescue: \(textRescueTime) minutes."
         
+        mapPoints(victim: victim, evacLat: evacLat!, evacLng: evacLng!)
         textView.text = textToDisplay
     }
+    func mapPoints(victim: Victim, evacLat: Float, evacLng: Float) {
+        
+            var color: MKPinAnnotationColor = MKPinAnnotationColor.purple
+    
+            let vicLat = CLLocationDegrees(victim.lat!)
+            let vicLong = CLLocationDegrees(victim.lon!)
+        
+            let evacLat = CLLocationDegrees(evacLat)
+            let evacLong = CLLocationDegrees(evacLng)
+        
+            let victimCoordinate = CLLocationCoordinate2D(latitude: vicLat, longitude: vicLong)
+            let evacCoordinate = CLLocationCoordinate2D(latitude: evacLat, longitude: evacLong)
+        
+            let vicAnnotation = MKPointAnnotation()
+            vicAnnotation.coordinate = victimCoordinate
+            vicAnnotation.title = "\(victim.name)"
+        
+            let evacAnnotation = MKPointAnnotation()
+            evacAnnotation.coordinate = evacCoordinate
+            evacAnnotation.title = "Evacuator"
+        
+            var evacAnnotationView = MKPinAnnotationView(annotation: evacAnnotation, reuseIdentifier: "evac")
+            evacAnnotationView.pinTintColor = UIColor.blue
+        
+            let span = MKCoordinateSpanMake(0.6, 0.6)
+            let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude:evacLat, longitude:evacLong), span: span)
+        
+            mapView.setRegion(region, animated: true)
+
+            self.mapView.addAnnotation(vicAnnotation)
+            self.mapView.addAnnotation(evacAnnotation)
+    }
+    
     
     func createVictimObjects(){
         let victim1 = Victim(name: "David", victimID: "v1", lat:29.676784, lon:-95.051149, group_size:2)
