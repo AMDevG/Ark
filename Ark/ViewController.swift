@@ -8,11 +8,14 @@
 
 import UIKit
 import MapKit
-//import SwiftyJSON
+import SwiftyJSON
 
 class ViewController: UIViewController, MKMapViewDelegate {
     
     var victim_array: [Victim] = []
+    
+    var enteredName: String?
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var textView: UITextView!
     
@@ -30,8 +33,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         print("Selected victim \(selectedVictim)")
         
-        downloadPredictions(victim: selectedVictim)
+        enteredName = nameField.text
+        print("Entered name is \(enteredName)")
+        
+        downloadPredictions(victim: selectedVictim, name: enteredName!)
         victim_array.remove(at: Int(random_int))
+        
         
         nameField.text = ""
         numPeopleField.text = ""
@@ -51,7 +58,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         super.didReceiveMemoryWarning()
     }
     
-    func downloadPredictions(victim: Victim){
+    func downloadPredictions(victim: Victim, name: String){
         var ID = victim.victimID! + "/"
         var strLat = String(describing: victim.lat!)+"/"
         var strLon = String(describing: victim.lon!)+"/"
@@ -66,10 +73,30 @@ class ViewController: UIViewController, MKMapViewDelegate {
             else{return}
         
         let jsonData = NSData(contentsOf: requestUrl)
+        
+        
         let readableJSON = try! JSONSerialization.jsonObject(with: jsonData! as Data, options: []) as![String:AnyObject]
         
-        print("JSON Returned is \(readableJSON)")
-        //let object = JSON(readableJSON)
+        let JSONobject = JSON(readableJSON)
+    
+        
+    
+        
+        print("\(JSONobject)")
+        //PARSING CODE 
+        
+        var textID = String(describing: JSONobject["evacID"])
+        var textDistance = String(describing: JSONobject["distance"])
+        
+        var intDistance = Double(textDistance)
+        var rescueTimeAdj = 1.5
+        var rescueTime = intDistance! * rescueTimeAdj
+        
+        var textRescueTime = String(describing: rescueTime)
+
+        var textToDisplay = "A civilian rescuer is coming to rescue you, \(enteredName!)! \n  \n Rescuer is on the way: \n \n Distance: \(textDistance) miles \n \n Time to Rescue: \(textRescueTime) minutes."
+        
+        textView.text = textToDisplay
     }
     
     func createVictimObjects(){
@@ -115,7 +142,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
-    
+  
 }
+
 
 

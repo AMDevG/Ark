@@ -33,7 +33,7 @@
                                     <action selector="sendSavedButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N36-t8-M6Z"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="PUT JSON RESPONSE HERE" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Uf-u1-A7M">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Uf-u1-A7M">
                                 <rect key="frame" x="16" y="308" width="343" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
