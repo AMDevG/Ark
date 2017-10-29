@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9E43C2D71FA57922006503B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E43C2D61FA57922006503B2 /* AppDelegate.swift */; };
+		9E43C2D91FA57922006503B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E43C2D81FA57922006503B2 /* ViewController.swift */; };
+		9E43C2DC1FA57922006503B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E43C2DA1FA57922006503B2 /* Main.storyboard */; };
+		9E43C2DE1FA57922006503B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E43C2DD1FA57922006503B2 /* Assets.xcassets */; };
+		9E43C2E11FA57922006503B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E43C2DF1FA57922006503B2 /* LaunchScreen.storyboard */; };
+		9E43C2EC1FA57922006503B2 /* ArkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E43C2EB1FA57922006503B2 /* ArkTests.swift */; };
+		9E43C2F71FA57922006503B2 /* ArkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E43C2F61FA57922006503B2 /* ArkUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9E43C2E81FA57922006503B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E43C2CB1FA57922006503B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E43C2D21FA57922006503B2;
+			remoteInfo = Ark;
+		};
+		9E43C2F31FA57922006503B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E43C2CB1FA57922006503B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E43C2D21FA57922006503B2;
+			remoteInfo = Ark;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9E43C2D31FA57922006503B2 /* Ark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ark.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E43C2D61FA57922006503B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9E43C2D81FA57922006503B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9E43C2DB1FA57922006503B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9E43C2DD1FA57922006503B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E43C2E01FA57922006503B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E43C2E21FA57922006503B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E43C2E71FA57922006503B2 /* ArkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E43C2EB1FA57922006503B2 /* ArkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArkTests.swift; sourceTree = "<group>"; };
+		9E43C2ED1FA57922006503B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E43C2F21FA57922006503B2 /* ArkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E43C2F61FA57922006503B2 /* ArkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArkUITests.swift; sourceTree = "<group>"; };
+		9E43C2F81FA57922006503B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9E43C2D01FA57922006503B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E43C2E41FA57922006503B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E43C2EF1FA57922006503B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E43C2CA1FA57922006503B2 = {
+			isa = PBXGroup;
+			children = (
+				9E43C2D51FA57922006503B2 /* Ark */,
+				9E43C2EA1FA57922006503B2 /* ArkTests */,
+				9E43C2F51FA57922006503B2 /* ArkUITests */,
+				9E43C2D41FA57922006503B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9E43C2D41FA57922006503B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E43C2D31FA57922006503B2 /* Ark.app */,
+				9E43C2E71FA57922006503B2 /* ArkTests.xctest */,
+				9E43C2F21FA57922006503B2 /* ArkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E43C2D51FA57922006503B2 /* Ark */ = {
+			isa = PBXGroup;
+			children = (
+				9E43C2D61FA57922006503B2 /* AppDelegate.swift */,
+				9E43C2D81FA57922006503B2 /* ViewController.swift */,
+				9E43C2DA1FA57922006503B2 /* Main.storyboard */,
+				9E43C2DD1FA57922006503B2 /* Assets.xcassets */,
+				9E43C2DF1FA57922006503B2 /* LaunchScreen.storyboard */,
+				9E43C2E21FA57922006503B2 /* Info.plist */,
+			);
+			path = Ark;
+			sourceTree = "<group>";
+		};
+		9E43C2EA1FA57922006503B2 /* ArkTests */ = {
+			isa = PBXGroup;
+			children = (
+				9E43C2EB1FA57922006503B2 /* ArkTests.swift */,
+				9E43C2ED1FA57922006503B2 /* Info.plist */,
+			);
+			path = ArkTests;
+			sourceTree = "<group>";
+		};
+		9E43C2F51FA57922006503B2 /* ArkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9E43C2F61FA57922006503B2 /* ArkUITests.swift */,
+				9E43C2F81FA57922006503B2 /* Info.plist */,
+			);
+			path = ArkUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9E43C2D21FA57922006503B2 /* Ark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E43C2FB1FA57922006503B2 /* Build configuration list for PBXNativeTarget "Ark" */;
+			buildPhases = (
+				9E43C2CF1FA57922006503B2 /* Sources */,
+				9E43C2D01FA57922006503B2 /* Frameworks */,
+				9E43C2D11FA57922006503B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ark;
+			productName = Ark;
+			productReference = 9E43C2D31FA57922006503B2 /* Ark.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9E43C2E61FA57922006503B2 /* ArkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E43C2FE1FA57922006503B2 /* Build configuration list for PBXNativeTarget "ArkTests" */;
+			buildPhases = (
+				9E43C2E31FA57922006503B2 /* Sources */,
+				9E43C2E41FA57922006503B2 /* Frameworks */,
+				9E43C2E51FA57922006503B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E43C2E91FA57922006503B2 /* PBXTargetDependency */,
+			);
+			name = ArkTests;
+			productName = ArkTests;
+			productReference = 9E43C2E71FA57922006503B2 /* ArkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9E43C2F11FA57922006503B2 /* ArkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E43C3011FA57922006503B2 /* Build configuration list for PBXNativeTarget "ArkUITests" */;
+			buildPhases = (
+				9E43C2EE1FA57922006503B2 /* Sources */,
+				9E43C2EF1FA57922006503B2 /* Frameworks */,
+				9E43C2F01FA57922006503B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E43C2F41FA57922006503B2 /* PBXTargetDependency */,
+			);
+			name = ArkUITests;
+			productName = ArkUITests;
+			productReference = 9E43C2F21FA57922006503B2 /* ArkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9E43C2CB1FA57922006503B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "dev G Development";
+				TargetAttributes = {
+					9E43C2D21FA57922006503B2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = GFZ65FH5YW;
+						ProvisioningStyle = Automatic;
+					};
+					9E43C2E61FA57922006503B2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = GFZ65FH5YW;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9E43C2D21FA57922006503B2;
+					};
+					9E43C2F11FA57922006503B2 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = GFZ65FH5YW;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9E43C2D21FA57922006503B2;
+					};
+				};
+			};
+			buildConfigurationList = 9E43C2CE1FA57922006503B2 /* Build configuration list for PBXProject "Ark" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9E43C2CA1FA57922006503B2;
+			productRefGroup = 9E43C2D41FA57922006503B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E43C2D21FA57922006503B2 /* Ark */,
+				9E43C2E61FA57922006503B2 /* ArkTests */,
+				9E43C2F11FA57922006503B2 /* ArkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9E43C2D11FA57922006503B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E43C2E11FA57922006503B2 /* LaunchScreen.storyboard in Resources */,
+				9E43C2DE1FA57922006503B2 /* Assets.xcassets in Resources */,
+				9E43C2DC1FA57922006503B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E43C2E51FA57922006503B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E43C2F01FA57922006503B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9E43C2CF1FA57922006503B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E43C2D91FA57922006503B2 /* ViewController.swift in Sources */,
+				9E43C2D71FA57922006503B2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E43C2E31FA57922006503B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E43C2EC1FA57922006503B2 /* ArkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E43C2EE1FA57922006503B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E43C2F71FA57922006503B2 /* ArkUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9E43C2E91FA57922006503B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E43C2D21FA57922006503B2 /* Ark */;
+			targetProxy = 9E43C2E81FA57922006503B2 /* PBXContainerItemProxy */;
+		};
+		9E43C2F41FA57922006503B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E43C2D21FA57922006503B2 /* Ark */;
+			targetProxy = 9E43C2F31FA57922006503B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9E43C2DA1FA57922006503B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E43C2DB1FA57922006503B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9E43C2DF1FA57922006503B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E43C2E01FA57922006503B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9E43C2F91FA57922006503B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E43C2FA1FA57922006503B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9E43C2FC1FA57922006503B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GFZ65FH5YW;
+				INFOPLIST_FILE = Ark/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AMdevG.Ark;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9E43C2FD1FA57922006503B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GFZ65FH5YW;
+				INFOPLIST_FILE = Ark/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AMdevG.Ark;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9E43C2FF1FA57922006503B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = GFZ65FH5YW;
+				INFOPLIST_FILE = ArkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AMdevG.ArkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ark.app/Ark";
+			};
+			name = Debug;
+		};
+		9E43C3001FA57922006503B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = GFZ65FH5YW;
+				INFOPLIST_FILE = ArkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AMdevG.ArkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ark.app/Ark";
+			};
+			name = Release;
+		};
+		9E43C3021FA57922006503B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = GFZ65FH5YW;
+				INFOPLIST_FILE = ArkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AMdevG.ArkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Ark;
+			};
+			name = Debug;
+		};
+		9E43C3031FA57922006503B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = GFZ65FH5YW;
+				INFOPLIST_FILE = ArkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AMdevG.ArkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Ark;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9E43C2CE1FA57922006503B2 /* Build configuration list for PBXProject "Ark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E43C2F91FA57922006503B2 /* Debug */,
+				9E43C2FA1FA57922006503B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E43C2FB1FA57922006503B2 /* Build configuration list for PBXNativeTarget "Ark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E43C2FC1FA57922006503B2 /* Debug */,
+				9E43C2FD1FA57922006503B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9E43C2FE1FA57922006503B2 /* Build configuration list for PBXNativeTarget "ArkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E43C2FF1FA57922006503B2 /* Debug */,
+				9E43C3001FA57922006503B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9E43C3011FA57922006503B2 /* Build configuration list for PBXNativeTarget "ArkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E43C3021FA57922006503B2 /* Debug */,
+				9E43C3031FA57922006503B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9E43C2CB1FA57922006503B2 /* Project object */;
+}
