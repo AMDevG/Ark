@@ -16,6 +16,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var textView: UITextView!
     
+    @IBOutlet weak var nameField: UITextField!
+    
+    @IBOutlet weak var numPeopleField: UITextField!
+    
     @IBAction func sendSavedButtonPress(_ sender: AnyObject) {
         print("Victim array has this many \(victim_array.count)")
         
@@ -29,10 +33,17 @@ class ViewController: UIViewController, MKMapViewDelegate {
         downloadPredictions(victim: selectedVictim)
         victim_array.remove(at: Int(random_int))
         
+        nameField.text = ""
+        numPeopleField.text = ""
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        
+        view.addGestureRecognizer(tap)
+        
         createVictimObjects()
         print("Victim array has this many \(victim_array.count)")
     }
@@ -58,10 +69,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let readableJSON = try! JSONSerialization.jsonObject(with: jsonData! as Data, options: []) as![String:AnyObject]
         
         print("JSON Returned is \(readableJSON)")
-        
         //let object = JSON(readableJSON)
-        
-        
     }
     
     func createVictimObjects(){
@@ -101,6 +109,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         let victim12 = Victim(name: "Maggie", victimID: "v12", lat:29.704222, lon:-95.382541, group_size:3)
         victim_array.append(victim12)
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
 }
