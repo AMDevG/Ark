@@ -13,46 +13,29 @@ import SwiftyJSON
 class ViewController: UIViewController, MKMapViewDelegate {
     
     var victim_array: [Victim] = []
-    
     var enteredName: String?
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var textView: UITextView!
-    
     @IBOutlet weak var nameField: UITextField!
-    
     @IBOutlet weak var numPeopleField: UITextField!
     
     @IBAction func sendSavedButtonPress(_ sender: AnyObject) {
-        print("Victim array has this many \(victim_array.count)")
-        
         var random_int = arc4random_uniform(UInt32(Int(victim_array.count - 1))) + 1;
-        
-        print("Random int is: \(random_int)")
         var selectedVictim = victim_array[Int(random_int)]
         
-        print("Selected victim \(selectedVictim)")
-        
         enteredName = nameField.text
-        print("Entered name is \(enteredName)")
-        
         downloadPredictions(victim: selectedVictim, name: enteredName!)
         victim_array.remove(at: Int(random_int))
-        
-        
         nameField.text = ""
         numPeopleField.text = ""
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
-        
         createVictimObjects()
-        print("Victim array has this many \(victim_array.count)")
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,8 +47,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
         var strLon = String(describing: victim.lon!)+"/"
         var strGrpSize = String(describing: victim.group_size!)+"/"
         
-        print("ID: \(ID) Lat: \(strLat) Lng: \(strLon) GrpSize: \(strGrpSize)")
-        
         let base_url = "http://arkapp.pythonanywhere.com/api/process/"
         let call_url = base_url + ID + strLat + strLon + strGrpSize
         
@@ -73,17 +54,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
             else{return}
         
         let jsonData = NSData(contentsOf: requestUrl)
-        
-        
         let readableJSON = try! JSONSerialization.jsonObject(with: jsonData! as Data, options: []) as![String:AnyObject]
-        
         let JSONobject = JSON(readableJSON)
-    
-        
-    
-        
-        print("\(JSONobject)")
-        //PARSING CODE 
         
         var textID = String(describing: JSONobject["evacID"])
         var textDistance = String(describing: JSONobject["distance"])
@@ -91,16 +63,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
         var intDistance = Double(textDistance)
         var rescueTimeAdj = 1.5
         var rescueTime = intDistance! * rescueTimeAdj
-        
         var textRescueTime = String(describing: rescueTime)
-
         var textToDisplay = "A civilian rescuer is coming to rescue you, \(enteredName!)! \n  \n Rescuer is on the way: \n \n Distance: \(textDistance) miles \n \n Time to Rescue: \(textRescueTime) minutes."
         
         textView.text = textToDisplay
     }
     
     func createVictimObjects(){
-        
         let victim1 = Victim(name: "David", victimID: "v1", lat:29.676784, lon:-95.051149, group_size:2)
         victim_array.append(victim1)
         
@@ -139,7 +108,6 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
   
