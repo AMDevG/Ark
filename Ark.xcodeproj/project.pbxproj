@@ -14,6 +14,8 @@
 		9E43C2E11FA57922006503B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E43C2DF1FA57922006503B2 /* LaunchScreen.storyboard */; };
 		9E43C2EC1FA57922006503B2 /* ArkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E43C2EB1FA57922006503B2 /* ArkTests.swift */; };
 		9E43C2F71FA57922006503B2 /* ArkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E43C2F61FA57922006503B2 /* ArkUITests.swift */; };
+		9E43C3051FA57962006503B2 /* Victim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E43C3041FA57962006503B2 /* Victim.swift */; };
+		9E43C3071FA57969006503B2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E43C3061FA57969006503B2 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		9E43C2F21FA57922006503B2 /* ArkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E43C2F61FA57922006503B2 /* ArkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArkUITests.swift; sourceTree = "<group>"; };
 		9E43C2F81FA57922006503B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E43C3041FA57962006503B2 /* Victim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Victim.swift; sourceTree = "<group>"; };
+		9E43C3061FA57969006503B2 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				9E43C2D61FA57922006503B2 /* AppDelegate.swift */,
 				9E43C2D81FA57922006503B2 /* ViewController.swift */,
+				9E43C3041FA57962006503B2 /* Victim.swift */,
+				9E43C3061FA57969006503B2 /* MapViewController.swift */,
 				9E43C2DA1FA57922006503B2 /* Main.storyboard */,
 				9E43C2DD1FA57922006503B2 /* Assets.xcassets */,
 				9E43C2DF1FA57922006503B2 /* LaunchScreen.storyboard */,
@@ -262,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E43C3051FA57962006503B2 /* Victim.swift in Sources */,
 				9E43C2D91FA57922006503B2 /* ViewController.swift in Sources */,
 				9E43C2D71FA57922006503B2 /* AppDelegate.swift in Sources */,
+				9E43C3071FA57969006503B2 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
