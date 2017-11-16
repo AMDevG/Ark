@@ -38,6 +38,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         createVictimObjects()
+        numPeopleField.keyboardType = UIKeyboardType.numberPad
         
         let span = MKCoordinateSpanMake(0.08, 0.08)
         let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude:29.750733, longitude:-95.365633), span: span)
@@ -84,6 +85,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     func mapPoints(victim: Victim, evacLat: Float, evacLng: Float) {
         
+            textView.isHidden = false
+        
+            var enteredName = nameField.text!
             var color: MKPinAnnotationColor = MKPinAnnotationColor.purple
     
             let vicLat = CLLocationDegrees(victim.lat!)
@@ -97,7 +101,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
             let vicAnnotation = MKPointAnnotation()
             vicAnnotation.coordinate = victimCoordinate
-            vicAnnotation.title = "\(victim.name)"
+            vicAnnotation.title = "\(enteredName)"
         
             let evacAnnotation = MKPointAnnotation()
             evacAnnotation.coordinate = evacCoordinate
