@@ -40,6 +40,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
         createVictimObjects()
         numPeopleField.keyboardType = UIKeyboardType.numberPad
         
+        textView.layer.borderColor = UIColor.black.cgColor
+        
         let span = MKCoordinateSpanMake(0.08, 0.08)
         let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude:29.750733, longitude:-95.365633), span: span)
         
@@ -78,7 +80,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         var rescueTimeAdj = 2.2
         var rescueTime = intDistance! * rescueTimeAdj
         var textRescueTime = String(describing: rescueTime)
-        var textToDisplay = "A civilian rescuer is coming to rescue you, \(enteredName!)! \n  \n Rescuer is on the way: \n \n Distance: \(textDistance) miles \n \n Time to Rescue: \(textRescueTime) minutes."
+        var textToDisplay = "A civilian evacuator is on their way, \(enteredName!)! \n \n - Distance: \(textDistance) miles \n \n - Time to Rescue: \(textRescueTime) minutes."
         
         mapPoints(victim: victim, evacLat: evacLat!, evacLng: evacLng!)
         textView.text = textToDisplay
